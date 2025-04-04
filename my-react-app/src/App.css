@@ -39,3 +39,11 @@
 .box1{
 color: red;
 }
+.btn{
+  background-color: blue;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+.btn:hover{
+  background-color: green;
+}

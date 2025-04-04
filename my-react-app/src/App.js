@@ -1,13 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar';
+import Navbar from './componant/Navbar';
+import First from './componant/First'
 
-let var1 = "devanand";
+
 
 function App() {
   return (
-    
+    <>
     <Navbar/>
+    <div className="container">
+    <h1>Enter the text</h1>
+        <First/> 
+        
+    </div>
+    
+    
+    </>
+    
     
   );
 }
