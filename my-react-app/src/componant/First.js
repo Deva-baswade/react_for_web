@@ -9,6 +9,19 @@ export default function First(props) {
     let usetext = text.toLowerCase()
     settext(usetext)   
   }
+  const handleclearclick = ()=>{
+    settext("");
+  }
+  const handlechange1click = ()=>{
+    const body = document.body;
+    body.style.backgroundColor = "black"
+    body.style.color = "white"
+  }
+  const handlechangeclick = ()=>{
+    const body = document.body;
+    body.style.backgroundColor = "white"
+    body.style.color = "black"
+  }
   const handleOnChange = (event)=>{     
     settext(event.target.value)    
   }
@@ -16,11 +29,13 @@ export default function First(props) {
   return (
     <>    
      <div className="box1">
-    <h1>{props.h1}</h1> 
-    <textarea type="text" className="form-control" id="exampleInputEmail1" value={text}  onChange={handleOnChange}   row="10" cols="8"   aria-describedby="emailHelp" />
-    
+    <h1>{props.h1}</h1>   
+    <textarea   type="text"  className="form-control"  id="exampleInputEmail1"  value={text}  onChange={handleOnChange}  style={{ width: '900px', height: '200px' }}  aria-describedby="emailHelp"/>    
     <button type="submit" className="btn btn-primary mx-3" onClick={handleclick} >Change to upperCase</button>
     <button type="submit" className="btn btn-primary" onClick={handleclick1} >Change to upperCase</button>
+    <button type="submit" className="btn btn-primary mx-3" onClick={handleclearclick} >Clear the textarea</button>
+    <button type="submit" className="btn btn-primary mx-3" onClick={handlechange1click} >mode to black</button>
+    <button type="submit" className="btn btn-primary mx-3" onClick={handlechangeclick} >mode to white</button>
     </div>
     <div className='box1 my-3'>
       <h1>Below count the words</h1>
