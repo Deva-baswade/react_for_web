@@ -1,15 +1,12 @@
 import React from 'react'
 
 export default function Navbar(props) {
-  const mysyle = {
-    fontSize : "20px",
-    color : "black",
-    gap: "20px",
-    marginTop:"0px",
+  const myStyle ={
+    fontSize: "20px",
   }
   
   return (
-    <nav className="navbar navbar-expand-lg bg-light text-white">
+    <nav className={`navbar navbar-expand-lg navbar-dark bg-dark text-black`}>
     <div className="container-fluid">
       <a className="navbar-brand my-3" href="#">{props.title}</a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +15,7 @@ export default function Navbar(props) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent" >
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#"  style={mysyle}>TextChage</a>
+            <a className="nav-link active " aria-current="page" href="#" style={myStyle} >TextChage</a>
           </li>
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="#">Home</a>
@@ -29,6 +26,10 @@ export default function Navbar(props) {
           
          
         </ul>
+        <div className="form-check form-switch" mode={props.mode} onClick={props.togglemode}>
+            <input className="form-check-input" type="checkbox" role="switch" id="switchCheckDefault"/>
+            <label className="form-check-label  text-white" htmlFor="switchCheckDefault">Enable the darkmode</label>
+         </div>
         
       </div>
     </div>
