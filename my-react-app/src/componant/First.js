@@ -34,7 +34,7 @@ export default function First(props) {
   return (
     <>    
      <div className="box1">
-    <h1>{props.h1}</h1>   
+    <h1>Enter the text</h1>   
     <textarea   type="text"  className={`form-control bg-${props.mode}`} id="exampleInputEmail1"  value={text}  onChange={handleOnChange}  style={{ width: '900px', height: '200px' }}  aria-describedby="emailHelp" />    
     <button type="submit" className="btn btn-primary mx-3" onClick={handleclick} >Change to upperCase</button>
     <button type="submit" className="btn btn-primary" onClick={handleclick1} >Change to upperCase</button>
