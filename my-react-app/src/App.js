@@ -3,8 +3,8 @@ import './App.css';
 import Navbar from './componant/Navbar';
 import First from './componant/First';
 import Alert from './componant/Alert';
-import About from './componant/About';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import About from './componant/About';
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("white");
@@ -35,16 +35,20 @@ function App() {
 
   return (
     <>
-      <Router>
+      {/* <Router>
         <Navbar mode={mode} togglemode={togglemode} />
         <Alert alert={alert} />
         <div className="container my-5">
           <Routes>
             <Route  exact path="/about" element={<About mode={mode}  togglemode={togglemode} showAlert={showAlert} />} />
-            <Route exact path="/" element={<First mode={mode}  togglemode={togglemode} showAlert={showAlert} />} />
+            <Route exact path="/" element={<First mode={mode}  togglemode={togglemode} />} />
           </Routes>
         </div>
-      </Router>
+      </Router> */}
+      <Navbar mode={mode} togglemode={togglemode} />
+      <Alert alert={alert} />
+      <First mode={mode}  togglemode={togglemode} showAlert={showAlert}/>
+      
     </>
   );
 }

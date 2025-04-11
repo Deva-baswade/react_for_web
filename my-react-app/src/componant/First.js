@@ -33,18 +33,18 @@ export default function First(props) {
   const [text , settext] = useState("enter the text") 
   return (
     <>    
-     <div className="box1">
-    <h1>Enter the text</h1>   
-    <textarea   type="text"  className={`form-control bg-${props.mode}`} id="exampleInputEmail1"  value={text}  onChange={handleOnChange}  style={{ width: '900px', height: '200px' }}  aria-describedby="emailHelp" />    
+     <div className="box1 mx-5">
+    <h1 className="mx-5 my-5">Enter the text</h1>   
+    <textarea   type="text"  className={`form-control bg-${props.mode}`} id="exampleInputEmail1 "  value={text}  onChange={handleOnChange}  style={{ width: '900px', height: '200px' }}  aria-describedby="emailHelp" />    
     <button type="submit" className="btn btn-primary mx-3" onClick={handleclick} >Change to upperCase</button>
     <button type="submit" className="btn btn-primary" onClick={handleclick1} >Change to upperCase</button>
     <button type="submit" className="btn btn-primary mx-3" onClick={handleclearclick} >Clear the textarea</button>
     <button type="submit" className="btn btn-primary mx-3" onClick={handlechange1click} >mode to black</button>
     <button type="submit" className="btn btn-primary mx-3" onClick={handlechangeclick} >mode to white</button>
     </div>
-    <div className='box1 my-3'>
+    <div className='box1 mx-5'>
       <h1>Below count the words</h1>
-      <p>{text.split(" ").length} words and the {text.length}char</p>
+      <p>{text.split(" ").filter((element)=>{return element.length!=0}).length} words and the {text.length}char</p>
       <p>{0.008 * text.split(" ").length }  minute for reading</p>
       <h2>Preview</h2>
       <p>{text}</p>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 export default function Navbar(props) {
   const myStyle ={
@@ -19,10 +19,10 @@ export default function Navbar(props) {
             <a className="nav-link active " aria-current="page" href="#" style={myStyle} >TextChage</a>
           </li>
           <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+            <a className="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/about">About</Link>
+            <a className="nav-link" href="/about">About</a>
           </li>
           
          
